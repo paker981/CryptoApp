@@ -1,0 +1,27 @@
+<mat-card>
+    <mat-card-header>
+        <h3>Preview</h3>
+    </mat-card-header>
+    <mat-card-content>
+        <div *ngIf="(data$ | async) as cryptoData">
+
+          <div>
+            <p>Nazwa: {{ cryptoData.name }}</p>
+            <p>Cena: {{ cryptoData.price }}</p>
+          </div>
+            
+          <div>
+            <button (click)="onBuyCrypto(cryptoData)">Kup</button>
+          </div>
+          
+          </div>
+          <div>
+            <button (click)="onResetInterval()">Resetuj odświeżanie</button>
+          </div>
+         
+    </mat-card-content>
+</mat-card>
+
+
+  
+  
